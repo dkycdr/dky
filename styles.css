@@ -1,0 +1,149 @@
+/* ----------------------------- */
+/*         DEFINISI WARNA        */
+/* ----------------------------- */
+:root {
+    --bg-main: #181818;        /* Latar utama dark */
+    --bg-card: #242424;        /* Latar blok konten */
+    --text-color: #e0e0e0;      /* Warna teks utama */
+    --header-bg: #5c3aab;       /* Warna solid header (tidak gradient) */
+    --footer-bg: #5c3aab;       /* Warna solid footer (tidak gradient) */
+    --accent: #a9a9a9;         /* Aksen garis dan border */
+    --link-color: #bb86fc;     /* Warna link dan elemen interaktif */
+  }
+  
+  /* ----------------------------- */
+  /*          GLOBAL RESET         */
+  /* ----------------------------- */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-main);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* ----------------------------- */
+  /*          HEADER & NAV         */
+  /* ----------------------------- */
+  header {
+    background: var(--header-bg);
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* ----------------------------- */
+  /*         MAIN CONTENT          */
+  /* ----------------------------- */
+  main {
+    padding: 40px 20px;
+  }
+  
+  /* Styling untuk tiap Section (tentang, proyek, kontak, dll.) */
+  section {
+    background: var(--bg-card);
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 960px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+  }
+  
+  section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* ----------------------------- */
+  /*         ARTICLE STYLE         */
+  /* ----------------------------- */
+  article {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 4px solid var(--link-color);
+    transition: transform 0.3s;
+  }
+  
+  article:hover {
+    transform: translateX(10px);
+  }
+  
+  article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--link-color);
+  }
+  
+  /* ----------------------------- */
+  /*           FOOTER              */
+  /* ----------------------------- */
+  footer {
+    background: var(--footer-bg);
+    text-align: center;
+    padding: 7px 20px; /* dikurangi dari 30px jadi 10px untuk membuat footer lebih ramping */
+    border-top: 1px solid var(--accent);
+    font-size: 0.8rem;  /* font size juga bisa dikurangi agar lebih proporsional */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* shadow juga dikurangi intensitasnya */
+  }
+  
+  /* ----------------------------- */
+  /*          RESPONSIVE           */
+  /* ----------------------------- */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    section {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  
